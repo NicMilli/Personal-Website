@@ -383,6 +383,7 @@ body {
 
  .res {
   height: 100vh;
+  background-color: #ffffff;
  }
 
  .black {
@@ -535,6 +536,8 @@ body {
 
  .stack {
   border: solid 1px #ff6a95;
+  margin-left: 3px;
+  margin-right: 3px
  }
 
  .portfolioIcon {
