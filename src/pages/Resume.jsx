@@ -2,7 +2,7 @@
 
 function Resume() {
 // get url from firebase
-const resumeURL = "https://firebasestorage.googleapis.com/v0/b/personal-website-b4960.appspot.com/o/Nicholas_Milligan_CV.pdf?alt=media&token=74070090-e617-4ef2-8318-43b731a8379d"
+const resumeURL = "https://firebasestorage.googleapis.com/v0/b/personal-website-b4960.appspot.com/o/Nicholas_Milligan_CV.pdf?alt=media&token=250d9465-774d-4704-8948-b27ef5246df2"
 
   return (
     <div className='aboutPage'>
