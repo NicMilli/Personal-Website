@@ -57,7 +57,7 @@ const resumeURL = "https://firebasestorage.googleapis.com/v0/b/personal-website-
      <p>If you are having trouble viewing the PDF below, <a href={resumeURL} target='_blank' rel='noreferrer noreopenner' className='loading'>please follow this link.</a></p>
      <div className="res">
      <object data={resumeURL} type="application/pdf" width="90%" height="100%">
-      <p>Whoops, it seems we have a problem! <a href={resumeURL} target='_blank' rel='noreferrer noreopenner'>Please view my resume here.</a></p>
+      <p className='resumeIss'>Whoops, it seems we have a problem! <a href={resumeURL} target='_blank' rel='noreferrer noreopenner'>Please view my resume here.</a></p>
   </object>
   {/* <iframe src="https://drive.google.com/file/d/1U-agvCPFjnHAYgcUEstHHvrsLbaBFVdE/preview" width="640" height="480" allow="autoplay"></iframe> */}
   </div>

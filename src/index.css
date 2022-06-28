@@ -273,15 +273,10 @@ body {
   background: #000000; 
 }
 
-.navbarLogo {
-  size: 3vh;
-  text-decoration: none;
-}
-
 .myIcon {
   height: 9.5vh;
   margin-top: 0.5vh;
-  width: 15vh;
+  width: auto;
   margin-left: 2vw;
 }
 
@@ -295,9 +290,9 @@ body {
   flex-wrap: wrap;
   text-align: right;
   justify-content: flex-end;
-  width: 80vw;
-  margin-left: 20vw;
-  margin: 5vw;
+  width: 85vw;
+  margin: 2vw;
+  line-height: 0.1vh
 }
 
 .textOver {
@@ -340,12 +335,14 @@ body {
 } 
 
 .navTitle {
-  font-size: 2vw;
+  font-size: 1.5vw;
   display: flex;
   flex-wrap: wrap;
+  margin-left: 5vw;
 }
 @media screen and (max-width: 450px) {
   .navTitle {
+    margin-left: 8vw;
     font-size: 10px;
   }
 } 
@@ -378,7 +375,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 2vh;
-  margin-right: 2vh;
+  margin-right: 1vw;
   justify-content: space-between;
   color: #BFB2F3;
   font-family: -apple-system, BlinkMacSystemFont, "Oxygen",
@@ -405,6 +402,15 @@ body {
  @media screen and (max-width: 1000px) {
   .res {
     background-color: #ffffff;
+  }
+} 
+
+.resumeIss {
+  height: 100vh;
+ }
+ @media screen and (max-width: 1000px) {
+  .resumeIss {
+    color: #000000;
   }
 } 
 
@@ -676,6 +682,15 @@ body {
     width: 100vw;
   }
 } 
+
+.projectLinks a {
+  text-decoration: none;
+  color: #BFB2F3;
+}
+.projectLinks a:hover {
+  text-decoration: underline;
+}
+
 
 .pButtons {
   display: flex;

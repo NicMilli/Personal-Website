@@ -126,11 +126,11 @@ if(loading || fetching) {
                 <br /> 
                </div>) 
             }
-            <div className="center">
+            <div className="center projectLinks">
               {url[item][0] !== '' 
               ? (<>
                   <a href={url[item][0]} target='_blank' rel='noreferrer noreopener' >
-                    <p className='align'> <FaLaptopCode/>Web App! </p>
+                    <p className='align'> <FaLaptopCode/> Web App! </p>
                   </a> 
                   &nbsp; </>)
               : null }
@@ -140,7 +140,7 @@ if(loading || fetching) {
               {url[item][1] !== '' 
               ? (<div >
                   <a href={url[item][1]} target='_blank' rel='noreferrer noreopener' >
-                    <p className='align'> <FaGithub/>  Source code! </p>
+                    <p className='align'> <FaGithub/> Source code! </p>
                   </a>
                 </div>)
               : null }
