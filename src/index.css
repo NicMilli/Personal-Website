@@ -310,6 +310,21 @@ body {
     width: 40vw;
   }
 } 
+@media screen and (max-width: 622px) {
+  .textOver {
+    width: 50vw;
+  }
+} 
+@media screen and (max-width: 505px) {
+  .textOver {
+    width: 60vw;
+  }
+} 
+@media screen and (max-width: 390px) {
+  .textOver {
+    width: 90vw;
+  }
+} 
 
 .menu:hover {
   text-decoration: underline;
@@ -551,6 +566,12 @@ body {
   height: 25vh;
   width: auto;
  }
+ @media screen and (max-width: 350px) {
+  .portfolioIcon {
+    width: 90vw;
+    height: auto;
+  }
+} 
 
  .projectTitle {
   font-size: 3vh;

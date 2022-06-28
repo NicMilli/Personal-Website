@@ -88,7 +88,7 @@ if(loading || fetching) {
     <>
       <p className="pageHeader"> <FaFileArchive/> &nbsp; Portfolio</p>
       <div className='center'>
-      <div className='pButtons'>
+      <div className='pButtons center'>
         {Object.keys(category).sort((a, b) => {
           if (a === 'All') {
           return -1;
