@@ -88,6 +88,7 @@ if(loading || fetching) {
     <>
       <p className="pageHeader"> <FaFileArchive/> &nbsp; Portfolio</p>
       <div className='center'>
+      <div className='pButtons'>
         {Object.keys(category).sort((a, b) => {
           if (a === 'All') {
           return -1;
@@ -99,6 +100,7 @@ if(loading || fetching) {
         }).map((key) => (
           sortButton(key) 
         ))}
+      </div>
       </div>
 
       <div >

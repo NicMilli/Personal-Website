@@ -54,7 +54,7 @@ const resumeURL = "https://firebasestorage.googleapis.com/v0/b/personal-website-
       View My Resume
      </a> */}
      Learn all you need to know from my resume below!
-     <p>If you are having trouble viewing the PDF below, <a href={resumeURL} target='_blank' rel='noreferrer noreopenner'>please follow this link.</a></p>
+     <p>If you are having trouble viewing the PDF below, <a href={resumeURL} target='_blank' rel='noreferrer noreopenner' className='loading'>please follow this link.</a></p>
      <div className="res">
      <object data={resumeURL} type="application/pdf" width="90%" height="100%">
       <p>Whoops, it seems we have a problem! <a href={resumeURL} target='_blank' rel='noreferrer noreopenner'>Please view my resume here.</a></p>

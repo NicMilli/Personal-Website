@@ -269,7 +269,7 @@ body {
   height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background: #000000; 
 }
 
@@ -277,19 +277,6 @@ body {
   size: 3vh;
   text-decoration: none;
 }
-
-/* .menu {
-  font-weight: 800;
-  font-size: 2vw;
-  justify-content: space-between;
-  color: transparent;
-  background-image: var(--gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  sans-serif;
-} */
 
 .myIcon {
   height: 9.5vh;
@@ -306,10 +293,16 @@ body {
 
 .twenty {
   width: 15vw;
+  margin-right: 5vw;
 }
 
 .eighty {
-  width: 85vw;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: right;
+  justify-content: flex-end;
+  width: 80vw;
+  margin-left: 20vw;
   margin: 5vw;
 }
 
@@ -338,16 +331,13 @@ body {
 } 
 
 .navTitle {
-  font-size: 1.5vw;
+  font-size: 2vw;
+  display: flex;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 450px) {
   .navTitle {
-    font-size: 2vw;
-  }
-} 
-@media screen and (max-width: 380px) {
-  .navTitle {
-    font-size: 8px;
+    font-size: 10px;
   }
 } 
 
@@ -358,7 +348,7 @@ body {
 .navItems {
  display: flex;
  list-style: none;
- text-align: center;
+ text-align: right;
  width: 100%;
  justify-content: flex-end;
  
@@ -367,6 +357,7 @@ body {
 .navItem {
   display: flex;
   align-items: center;
+  text-align: right;
 }
 
 .navItem a:hover {
@@ -385,7 +376,6 @@ body {
   sans-serif;
 }
 
-
  .menuIcon {
   color: #FDF5E6;
   margin-top: 0.5vh;
@@ -402,8 +392,12 @@ body {
 
  .res {
   height: 100vh;
-  background-color: #ffffff;
  }
+ @media screen and (max-width: 1000px) {
+  .res {
+    background-color: #ffffff;
+  }
+} 
 
  .black {
   overflow: hidden;
@@ -556,7 +550,7 @@ body {
  .stack {
   border: solid 1px #ff6a95;
   margin-left: 3px;
-  margin-right: 3px
+  margin-right: 3px;
  }
 
  .portfolioIcon {
@@ -668,12 +662,17 @@ body {
   }
 } 
 
+.pButtons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .prt-btn {
   background-color: inherit;
   color: #BFB2F3;
   margin-left: 0.5vw;
   font-size: 2vh;
-  
+  border: 0; 
 }
 
 .prt-btn:hover {
@@ -691,6 +690,7 @@ body {
   color: #845ec2;
   margin-left: 0.5vw;
   font-size: 2vh;
+  border: 0; 
 }
 
 .contact-btn {

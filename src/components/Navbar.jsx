@@ -13,7 +13,6 @@ function Navbar() {
               </div>
 
               <div className="eighty">
-              <ul className='navItems'>
               {navItems.map(item => {
                 return(
                 <li key={item.id} className='navItem' >
@@ -21,7 +20,6 @@ function Navbar() {
                 </li>
                 )
               })}
-              </ul>
               </div>
             
     </nav>
