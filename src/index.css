@@ -284,12 +284,6 @@ body {
   width: 15vh;
   margin-left: 2vw;
 }
-@media screen and (max-width: 450px) {
-  .myIcon {
-    height: 40px;
-    width: auto;
-  }
-} 
 
 .twenty {
   width: 15vw;
