@@ -1,1 +1,1 @@
-# This is the code for my personal website (nicholaskmilligan.com)[https://www.nicholaskmilligan.com]
+# This is the code for my personal website [nicholaskmilligan.com](https://www.nicholaskmilligan.com)
