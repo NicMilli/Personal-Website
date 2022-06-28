@@ -3,6 +3,7 @@ import { FaFileArchive, FaLaptopCode, FaGithub } from "react-icons/fa"
 import {doc, getDoc,} from 'firebase/firestore'
 import {db} from '../firebase.config'
 import {getAuth} from 'firebase/auth'
+import Loading from "../components/Loading"
 
 function Portfolio() {
 const [filter, setFilter] = useState('All')
@@ -80,7 +81,7 @@ const sortButton = (key) => {
 }
 
 if(loading || fetching) {
-  return <p>loading...</p>
+  return <><Loading/></>
 }
 
   return (

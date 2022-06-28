@@ -3,20 +3,17 @@ import { Link } from 'react-router-dom'
 
 function NotFound() {
   return (
-    <div >
-      <div >
-          <div >
-              <h1 >
+          <div className='loading'>
+              <p className='oops'>
                   Oops!
-              </h1>
+              </p>
               <p >404 - Page not found!</p>
-              <Link to='/' >
+              <Link to='/' className='center'>
                   <FaHome />
+                  &nbsp;
                   Back To Home
               </Link>
           </div>
-      </div>
-    </div>
   )
 }
 

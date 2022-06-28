@@ -206,6 +206,25 @@ body {
   }
 }
 
+@keyframes fishy {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fishy 1.5s linear infinite;
+}
+
+.topSpace {
+  margin-top: 20vh;
+}
+
 @media screen and (min-width: 450px) {
   .respTitle {
     font-size: 5vw;
@@ -223,7 +242,7 @@ body {
   margin-top: 48vh;
   margin-bottom: 48vh;
   z-index: 1;
-  position:relative;
+  position: relative;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   text-shadow: 1px 1px #d3d3d3;
@@ -697,3 +716,28 @@ body {
     width: 40vw;
   }
 } 
+
+.loading {
+  font-weight: 600; 
+  text-align: center;
+  color: #ff6a95;
+}
+
+.loading a {
+  text-decoration: none;
+  color: #ff6a95;
+}
+
+.oops {
+  font-weight: 700;
+  font-size: 10vh;
+  text-align: center;
+  color: transparent;
+  background-image: var(--gradient);
+  background-size: 5%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+}
