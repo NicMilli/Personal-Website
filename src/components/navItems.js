@@ -24,9 +24,9 @@ export const navItems = [
         title: 'Contact',
         path: './contact',
     },
-    {
-        id: 7,
-        title: 'Writing Wall',
-        path: './wall',
-    }
+    // {
+    //     id: 7,
+    //     title: 'Writing Wall',
+    //     path: './wall',
+    // }
 ];

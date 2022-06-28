@@ -10,16 +10,6 @@ export const category =
         }
     ;
 
-    // export const url = [
-    //     'https://nicmilli.github.io/ERC20_NIC_Mintable/',
-    //     'https://nicmilli.github.io/SharedWallet/',
-    //     'https://nicmilli.github.io/SupplyChain/',
-    //     'https://housing-marketplace-one.vercel.app/',
-    //     'https://github-finder-ten-alpha.vercel.app/',
-    //     '',
-    //     'https://stunning-khapse-719d70.netlify.app/',
-    // ];
-
     //URL for [published app, github repository, image name]
 export const url = {
         MintableToken: ['https://nicmilli.github.io/ERC20_NIC_Mintable/', 'https://github.com/NicMilli/ERC20_NIC_Mintable', 'https://firebasestorage.googleapis.com/v0/b/personal-website-b4960.appspot.com/o/MintableToken.png?alt=media&token=043952a6-e86e-412c-a559-d0a01a7a5757'],

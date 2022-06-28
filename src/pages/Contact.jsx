@@ -61,77 +61,70 @@ const updateRecaptchaToken = (token) =>{
 
   return (
     <>
-    <div >
+      <div>
         <div>
-               <p className="pageHeader"> <FaPaperPlane/> &nbsp; Contact Me</p>
-              
-               </div>   
-        
-
+          <p className="pageHeader"> <FaPaperPlane/> &nbsp; Contact Me</p>
+        </div>   
         <main >
-            <form onSubmit={onSubmit} className='form-group'>
-            
+          <form onSubmit={onSubmit} className='form-group'>
             <div className='formWidth'>
-            <input type="text" 
-               
+              <input type="text" 
                 placeholder='Name*'
                 id='name'
                 value={name}
                 onChange={onChange}
                 required
                 />
-             </div>
+            </div>
                 
-             <div className='formWidth'>
-            <input type="text" 
-                
+            <div className='formWidth'>
+              <input type="text" 
                 placeholder='Company'
                 id='company'
                 value={company}
                 onChange={onChange}
-                /> </div>
+                /> 
+            </div>
 
-<div className="formWidth">
-  
-                <input type="email" 
-                
+            <div className="formWidth">
+              <input type="email" 
                 placeholder='Email*'
                 id='email'
                 value={email}
                 onChange={onChange}
                 required
-                /> </div> 
+                /> 
+            </div> 
 
-<div className="formWidth">
-                <textarea
-                    id="message"
-                    name="message"
-                    value={message}
-                    placeholder="Message*"
-                    onChange={onChange}
-                    required
-                  ></textarea>
-                  </div> 
+            <div className="formWidth">
+              <textarea
+                id="message"
+                name="message"
+                value={message}
+                placeholder="Message*"
+                onChange={onChange}
+                required>
+              </textarea>
+            </div> 
 
-                  <ReCAPTCHA
-                  ref={recaptchaRef}
-                  sitekey={recaptcha}
-                  onChange={updateRecaptchaToken}  
-                  id='g-recaptcha'      
-                  />
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={recaptcha}
+              onChange={updateRecaptchaToken}  
+              id='g-recaptcha'/>
 
-                <div >
-                    <button disabled={loading} className='contact-btn'>
-                       {loading ? 'submitting...' : (<p className='center'>Send &nbsp; <FaAngleDoubleRight fill='#000000' width='3vh' height='3vh' /></p>)}
-                    </button>
-                </div>
-            </form>
-
-            
-        </main>
-        
-    </div>
-
+            <div >
+              <button disabled={loading} className='contact-btn'>
+                {loading 
+                ? 'Submitting...' 
+                : (<p className='center'>
+                    Send &nbsp; <FaAngleDoubleRight fill='#000000' width='3vh' height='3vh' />
+                  </p>)}
+              </button>
+            </div>
+          </form>
+        </main> 
+      </div>
     </>
   )
 }
