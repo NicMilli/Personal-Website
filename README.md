@@ -2,9 +2,9 @@
 ## I have no problem if you want to fork this repository to use as your own personal website, I will happily show you how to setup firebase, Formspark (contact form provider) and vercel (used to deploy). I only ask that you give me credit for the ideas taken from this site.
 
 - The project is built in React and utilizes Google Firebase to store data as a content management system (CMS). This allows me to easily update my skills, resume and projects as I am continually learning.
-- I built this app from scratch using knowledge I have learn from multiple coding courses.
+- I built this app from scratch in under 1 week, using knowledge I have learn from multiple coding courses.
 
-# My personal is the bubble and color changing effect on my landing page- the pastel colors are soothing and the bubbles represent my love for fishing. Most importantly it was fun to create.
+## My personal highlight is the bubble and color changing effect on my landing page- the pastel colors are soothing and the bubbles represent my love for fishing. Most importantly it was fun to create.
 <img src='https://firebasestorage.googleapis.com/v0/b/personal-website-b4960.appspot.com/o/PersonalSite.png?alt=media&token=3a912bf6-86a1-4dc5-a2a3-b51c8eefa290' alt='landing page'/>
 
 # Skills Used:
