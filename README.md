@@ -5,11 +5,11 @@
 - I built this app from scratch using knowledge I have learn from multiple coding courses.
 
 # Skills Used:
-  Array and object mapping/sorting 
-  Styled error and success messages  
-  Asynchronous functions
-  Easily updateable content using Firebase as a CMS
-  CSS styling
+  - Array and object mapping/sorting 
+  - Styled error and success messages  
+  - Asynchronous functions
+  - Easily updateable content using Firebase as a CMS
+  - CSS styling
 
 # Technologies Used:
 * ReactJS
