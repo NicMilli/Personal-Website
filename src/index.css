@@ -223,6 +223,7 @@ body {
   float: right;
   align-items: center;
   justify-content: center;
+  text-align: left;
   height: 100%;
   margin-top: 1vh;
   margin-bottom: 1vh;
@@ -459,7 +460,7 @@ body {
 @keyframes bubble {
   0% { opacity: 0}
   10%,
-  90% { opacity: 1;}
+  80% { opacity: 1;}
   100% {
       transform: translate(12vh, -89.1vh);
       display: none;
@@ -469,7 +470,7 @@ body {
 @keyframes bubble2 {
   0% { opacity: 0;}
   10%,
-  90% { opacity: 1;}
+  80% { opacity: 1;}
   100% {
       transform: translate(-12vh, -89.1vh);
       display: none;
