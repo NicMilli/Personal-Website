@@ -29,16 +29,17 @@ I knew that creating the elements and content of the website would be easy as mo
 
 I chose Firebase to host my CMS as it is newer and faster than AWS and wouldn't require me to run my own backend server like using the MERN stack. I also had a good grasp on how to use it after my [Housing Marketplace App](https://github.com/NicMilli/housing-marketplace).
 
-# Successes and short-comings:
+# Successes and areas for improvement:
 * Success:
   * Created an app that successfully shows off my skills as well as my personality.
   * Took the app from design to deployment in under 1 week.
   * Learn't many new layout and design tricks using CSS3.
   * Easily customizable content using Firebase as a backend service.
 
-* Short-comings:
-  * Did not pre-design CSS viewport breakpoints meaning that time was wasted tweaking the breakpoints for each CSS class.
+* Areas for future improvements:
+  * Did not pre-designed CSS viewport breakpoints meaning that time was wasted tweaking the breakpoints for each CSS class.
   * Did not define enough globally used CSS classes, again wasting time customizing each element.
+  * The Firestore collection for the project information is structured as an array, my brain works better this way but in hind sight this may make the CMS more difficult to use for those who are not technical minded.
  
 # Code Highlights:
 
@@ -135,4 +136,5 @@ Using knowledge from recent courses I was able to create a much more readable ap
 
 # What I still want to add:
 * I would like to add a 'Wall' page where visitors can register using Google Authentication and leave a message on my wall. This is just a fun way to add color as well as interaction.
-* Onve I have added a backend for my [Feedback App](https://github.com/NicMilli/feedback-app) I would like to add it to my site as a way to get feedback and hopefully both improve the site and learn more of my shortcomings.
+* Once I have added a backend for my [Feedback App](https://github.com/NicMilli/feedback-app) I would like to add it to my site as a way to get feedback and hopefully both improve the site and learn more of my shortcomings.
+* I would like to learn about accessibility and find ways to improve usability of the site for those with disabilities.
