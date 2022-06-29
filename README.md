@@ -115,7 +115,7 @@ Below, the 'TechStack' element references the information from Firebase to displ
 }
 ```
 
-Using knowledge from recent courses I was able to create a much more readable app, my app.js file calls on separate elements. This is common practice, but a big improvement from my first attempts at react apps, such as my [Shared Wallet App](https://github.com/NicMilli/SharedWallet)
+Using knowledge from recent courses I was able to create a much more readable app, my app.js file calls on separate elements. This is common practice, but a big improvement from my first attempts at react apps, such as my [Shared Wallet App](https://github.com/NicMilli/SharedWallet) where creating different files for elements and components was not taught.
 
 ```javascript App.js
  function App() {
