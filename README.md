@@ -4,6 +4,9 @@
 - The project is built in React and utilizes Google Firebase to store data as a content management system (CMS). This allows me to easily update my skills, resume and projects as I am continually learning.
 - I built this app from scratch using knowledge I have learn from multiple coding courses.
 
+# My personal is the bubble and color changing effect on my landing page- the pastel colors are soothing and the bubbles represent my love for fishing. Most importantly it was fun to create.
+<img src='https://firebasestorage.googleapis.com/v0/b/personal-website-b4960.appspot.com/o/PersonalSite.png?alt=media&token=3a912bf6-86a1-4dc5-a2a3-b51c8eefa290' alt='landing page'/>
+
 # Skills Used:
   - Array and object mapping/sorting 
   - Styled error and success messages  
