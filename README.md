@@ -12,7 +12,7 @@
   - CSS styling
 
 # Technologies Used:
-* ReactJS
+* React
 * React-router-dom
 * React-toastify
 * dotenv
@@ -21,6 +21,8 @@
 * Git
 * GitHub
 * JavaScript
+* Google Recaptcha
+* React-Icons
 
 # Approach:
 I wanted to build a react app within 1 week in order to test and showcase my skills. I also wanted this app to be a portfolio website that can be used in job applications and thus could show many of my new skills; as well as convey my personality. Lastly I believe that websites should be easy to edit, even for those with no technical know-how. Most react apps and courses that I have come across have been hard coded, meaning that any minor changes to the content would likely require an engineer to rewrite the code and re-deploy the website. I wanted to make my website easily customizable.
@@ -46,6 +48,8 @@ I chose Firebase to host my CMS as it is newer and faster than AWS and wouldn't 
 Below, the 'TechStack' element references the information from Firebase to display icons for all the languages and technologies that I have used and learnt. As I learn new skills I simply need to update my firebase collection and the website content will be updated to reflect this. This means that anyone can update the content on my website without any knowledge of React.
 
 ```javascript TechStack Element
+  const {Languages, Frameworks} = icons
+
   useEffect(() => {
       const fetchIcons = async() => {
           const iconRef = doc(db, 'Portfolio', 'StackIcons')
@@ -61,17 +65,15 @@ Below, the 'TechStack' element references the information from Firebase to displ
       fetchIcons()
     }, [])
 
-const {Languages, Frameworks} = icons
-
     if(fetching) {
         return <><Loading/></>
       }
 
   return (
     <>
-    Languages:
-    <br />
-    {Object.keys(Languages).sort((a, b) => {
+        Languages:
+        <br />
+        {Object.keys(Languages).sort((a, b) => {
             if (Languages[a].rank < Languages[b].rank) {
             return -1;
             } else if (Languages[b].rank < Languages[a].rank) {
@@ -79,17 +81,17 @@ const {Languages, Frameworks} = icons
             } else {
             return a.localeCompare(b);
             }
-          }).map((key) => {
-        return(
-        <img key={key} src={Languages[key].src} 
-        alt={key} className={Languages[key].cName}/>
-        )
-    })}
-    <br />
+        }).map((key) => {
+            return(
+                <img key={key} src={Languages[key].src} 
+                alt={key} className={Languages[key].cName}/>
+                )
+        })}
+        <br />
        
-             Frameworks and Technologies:
-             <br />
-             {Object.keys(Frameworks).sort((a, b) => {
+        Frameworks and Technologies:
+        <br />
+        {Object.keys(Frameworks).sort((a, b) => {
             if (Frameworks[a].rank < Frameworks[b].rank) {
             return -1;
             } else if (Frameworks[b].rank < Frameworks[a].rank) {
@@ -97,12 +99,12 @@ const {Languages, Frameworks} = icons
             } else {
             return a.localeCompare(b);
             }
-          }).map((key) => {
-        return(
-        <img key={key} src={Frameworks[key].src} 
-        alt={key} className={Frameworks[key].cName}/>
-        )
-    })}
+        }).map((key) => {
+            return(
+                <img key={key} src={Frameworks[key].src} 
+                alt={key} className={Frameworks[key].cName}/>
+            )
+        })}
     </>
   )
 }
