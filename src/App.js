@@ -12,24 +12,23 @@ import NotFound from './pages/NotFound';
 
 function App() {
   return (
-<>
-    <Router>
-      
-      <div >
-      <Navbar className='front'/>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/resume' element={<Resume />} />
-          <Route path='/portfolio' element={<Portfolio />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/wall' element={<Wall />} />
-          <Route path='/*' element={<NotFound />} />
-        </Routes>
-      </div>
-    </Router>
-    <ToastContainer/> 
-   </>
+    <>
+      <Router>
+        <div >
+          <Navbar className='front'/>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/resume' element={<Resume />} />
+            <Route path='/portfolio' element={<Portfolio />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/wall' element={<Wall />} />
+            <Route path='/*' element={<NotFound />} />
+          </Routes>
+        </div>
+      </Router>
+      <ToastContainer/> 
+    </>
   );
 }
 

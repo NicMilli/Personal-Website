@@ -108,7 +108,15 @@ if(loading || fetching) {
       </div>
 
       <div >
-        {content.map((item, id) => ( 
+        {content.sort((a, b) => {
+            if (url[a][4] < url[b][4]) {
+            return -1;
+            } else if (url[a][4] > url[b][4]) {
+            return 1;
+            } else {
+            return 0;
+            }
+          }).map((item, id) => ( 
           <div key={id} className='border'>
             <p className='projectTitle'>{item}</p>
             {url[item][2] !== '' 
