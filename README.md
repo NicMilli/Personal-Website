@@ -1,70 +1,138 @@
-# Getting Started with Create React App
+# This is the code for my personal website [nicholaskmilligan.com](https://www.nicholaskmilligan.com)
+## I have no problem if you want to fork this repository to use as your own personal website, I will happily show you how to setup firebase, Formspark (contact form provider) and vercel (used to deploy). I only ask that you give me credit for the ideas taken from this site.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- The project is built in React and utilizes Google Firebase to store data as a content management system (CMS). This allows me to easily update my skills, resume and projects as I am continually learning.
+- I built this app from scratch using knowledge I have learn from multiple coding courses.
 
-## Available Scripts
+# Skills Used:
+  Array and object mapping/sorting 
+  Styled error and success messages  
+  Asynchronous functions
+  Easily updateable content using Firebase as a CMS
+  CSS styling
 
-In the project directory, you can run:
+# Technologies Used:
+* ReactJS
+* React-router-dom
+* React-toastify
+* dotenv
+* Firebase
+* CSS3
+* Git
+* GitHub
+* JavaScript
 
-### `npm start`
+# Approach:
+I wanted to build a react app within 1 week in order to test and showcase my skills. I also wanted this app to be a portfolio website that can be used in job applications and thus could show many of my new skills. Lastly I believe that websites should be easy to edit, even for those with no technical know-how. Most react apps and courses that I have come across have been hard coded, meaning that any minor changes to the content would likely require an engineer to rewrite the code and re-deploy the website. I wanted to make my website easily customizable.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I knew that creating the elements and content of the website would be easy as most courses cover these aspects thoroughly, the parts that I had less experience with were the CSS styling (React courses usually provide the CSS files pre-configured) and integrating the data from a database into my elements. The CSS would just be a case of developing a desired user interface look and researching ways to achieve that interface. This left me with deciding where to store my CMS data.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I chose Firebase to host my CMS as it is newer and faster than AWS and wouldn't require me to run my own backend server like using the MERN stack. I also had a good grasp on how to use it after my [Housing Marketplace App](https://github.com/NicMilli/housing-marketplace).
 
-### `npm test`
+# Successes and short-comings:
+* Success:
+  * Created an app that successfully shows off my skills as well as my personality.
+  * Took the app from design to deployment in under 1 week.
+  * Learn't many new layout and design tricks using CSS3.
+  * Easily customizable content using Firebase as a backend service.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Short-comings:
+  * Did not pre-design CSS viewport breakpoints meaning that time was wasted tweaking the breakpoints for each CSS class.
+  * Did not define enough globally used CSS classes, again wasting time customizing each element.
+ 
+# Code Highlights:
 
-### `npm run build`
+Below, the 'TechStack' element references the information from Firebase to display icons for all the languages and technologies that I have used and learnt. As I learn new skills I simply need to update my firebase collection and the website content will be updated to reflect this. This means that anyone can update the content on my website without any knowledge of React.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```javascript TechStack Element
+  useEffect(() => {
+      const fetchIcons = async() => {
+          const iconRef = doc(db, 'Portfolio', 'StackIcons')
+          const iconSnap = await getDoc(iconRef)
+    
+          if(iconSnap.exists()) {
+              setIcons(iconSnap.data())
+              setFetching(false)
+          }
+          
+      }
+    
+      fetchIcons()
+    }, [])
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+const {Languages, Frameworks} = icons
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    if(fetching) {
+        return <><Loading/></>
+      }
 
-### `npm run eject`
+  return (
+    <>
+    Languages:
+    <br />
+    {Object.keys(Languages).sort((a, b) => {
+            if (Languages[a].rank < Languages[b].rank) {
+            return -1;
+            } else if (Languages[b].rank < Languages[a].rank) {
+            return 1;
+            } else {
+            return a.localeCompare(b);
+            }
+          }).map((key) => {
+        return(
+        <img key={key} src={Languages[key].src} 
+        alt={key} className={Languages[key].cName}/>
+        )
+    })}
+    <br />
+       
+             Frameworks and Technologies:
+             <br />
+             {Object.keys(Frameworks).sort((a, b) => {
+            if (Frameworks[a].rank < Frameworks[b].rank) {
+            return -1;
+            } else if (Frameworks[b].rank < Frameworks[a].rank) {
+            return 1;
+            } else {
+            return a.localeCompare(b);
+            }
+          }).map((key) => {
+        return(
+        <img key={key} src={Frameworks[key].src} 
+        alt={key} className={Frameworks[key].cName}/>
+        )
+    })}
+    </>
+  )
+}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Using knowledge from recent courses I was able to create a much more readable app, my app.js file calls on separate elements. This is common practice, but a big improvement from my first attempts at react apps, such as my [Shared Wallet App](https://github.com/NicMilli/SharedWallet)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```javascript App.js
+ function App() {
+  return (
+    <>
+      <Router>
+        <div >
+          <Navbar className='front'/>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/resume' element={<Resume />} />
+            <Route path='/portfolio' element={<Portfolio />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/wall' element={<Wall />} />
+            <Route path='/*' element={<NotFound />} />
+          </Routes>
+        </div>
+      </Router>
+      <ToastContainer/> 
+    </>
+  );
+}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# What I still want to add:
+* I would like to add a 'Wall' page where visitors can register using Google Authentication and leave a message on my wall. This is just a fun way to add color as well as interaction.
+* Onve I have added a backend for my [Feedback App](https://github.com/NicMilli/feedback-app) I would like to add it to my site as a way to get feedback and hopefully both improve the site and learn more of my shortcomings.
