@@ -758,6 +758,11 @@ body {
   text-align: center;
   margin-bottom: 0px;
  }
+ @media screen and (max-height: 500px) {
+  .projectTitle {
+    font-size: 20px;
+  }
+}
 
  .textOver {
   position: absolute;
