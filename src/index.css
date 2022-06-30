@@ -127,21 +127,84 @@ body {
   align-items: center;
   justify-content: space-between;
   background: #000000; 
+  z-index: 999;
 }
+@media screen and (max-height: 800px) {
+  .navbar {
+    height: 90px;
+  }
+} 
 
 .myIcon {
   height: 9.5vh;
   margin-top: 0.5vh;
-  max-width: 25vw;
   margin-left: 2vw;
 }
+@media screen and (max-height: 800px) {
+  .myIcon {
+    height: 85px;
+    margin-top: 5px;
+  }
+} 
 
 .twenty {
   width: 15vw;
   margin-right: 5vw;
 }
 
-.eighty {
+.dropIcon {
+  color: #ff6a95;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.dropdown {
+  background-color: rgba(0,0,0,0.8);
+  position: fixed;
+  align-items: right;
+  justify-content: center;
+  width: 40vw;
+  height: auto;
+  margin-top: 20vh;
+  margin-left: 60vw;
+  padding-top: 15vh;
+  left: 0;
+  opacity: 1;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+@media screen and (max-height: 800px) {
+.dropdown {
+  margin-top: 200px;
+  padding-top: 120px;
+}
+}
+
+.menuList {
+  list-style: none;
+  text-align: left;
+}
+
+.dropItem a{
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  color: #BFB2F3;
+  font-family: -apple-system, BlinkMacSystemFont, "Oxygen",
+  sans-serif;
+}
+
+.dropItem a:hover {
+  color: #F8A3A8;
+  text-decoration: underline;
+ }
+
+.dropTitle {
+  text-align: left;
+}
+
+.eightylg {
   display: flex;
   flex-wrap: wrap;
   text-align: right;
@@ -150,6 +213,25 @@ body {
   margin: 2vw;
   line-height: 0.1vh;
 }
+@media screen and (max-width: 1100px) {
+  .eightylg {
+    display: none;
+  }
+} 
+
+.eightysm {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: right;
+  justify-content: flex-end;
+  width: 85vw;
+  margin-right: 2vw;
+}
+@media screen and (min-width: 1100px) {
+  .eightysm {
+    display: none;
+  }
+} 
 
 .navTitle {
   font-size: 1.7vw;
@@ -485,6 +567,28 @@ body {
       display: none;
   }
 }
+@media screen and (max-height: 800px) {
+  @keyframes bubble2 {
+    0% { opacity: 0;}
+    10%,
+    80% { opacity: 1;}
+    100% {
+        transform: translate(-12vh, calc(95px - 100vh));
+        display: none;
+    }
+  }
+} 
+@media screen and (max-height: 800px) {
+  @keyframes bubble {
+    0% { opacity: 0;}
+    10%,
+    80% { opacity: 1;}
+    100% {
+        transform: translate(12vh, calc(95px - 100vh));
+        display: none;
+    }
+  }
+} 
 
   .respTitle {
     font-size: 80px;
@@ -568,7 +672,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 840px) {
   .border {
     width: 100vw;
   }

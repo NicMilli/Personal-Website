@@ -48,9 +48,7 @@ useEffect(() => {
 
   setLoading(false)
 
-}, [fetching, filter, loading, category.API, category.All, 
-  category.Blockchain, category.Database, category.MATLAB,
-   category.Python, category.React])
+}, [fetching, filter, category])
 
    const itemHandler = (arr) => {
     if(arr){
