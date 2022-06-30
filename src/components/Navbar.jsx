@@ -30,7 +30,7 @@ const exitMenu = () => { setClick(false) }
 
       <div className="eightysm">
         {click 
-        ? <FaTimes size={30} className='dropIconTi' onClick={onClick} /> 
+        ? <FaTimes size={30} className='dropIcon' onClick={onClick} /> 
         : <FaBars size={30} className='dropIcon' onClick={onClick} />}
       </div>
 

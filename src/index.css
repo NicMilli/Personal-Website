@@ -158,28 +158,19 @@ body {
   z-index: 1000;
 }
 
-.dropIconTi {
-  color: #ff6a95;
-  cursor: pointer;
-  z-index: 1000;
-  position: fixed;
-}
-
 .dropdown {
   background-color: rgba(0,0,0,0.8);
-  position: fixed;
+  position: absolute;
   width: 40vw;
   height: auto;
-  margin-top: 20vh;
+  margin-top: 35vh;
   margin-left: 60vw;
-  padding-top: 15vh;
   transition: all 1s ease;
   z-index: 1;
 }
 @media screen and (max-height: 800px) {
 .dropdown {
-  margin-top: 200px;
-  padding-top: 120px;
+  margin-top: 300px;
 }
 }
 
@@ -215,7 +206,7 @@ body {
   margin: 2vw;
   line-height: 0.1vh;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 720px) {
   .eightylg {
     display: none;
   }
@@ -229,7 +220,7 @@ body {
   width: 85vw;
   margin-right: 2vw;
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 720px) {
   .eightysm {
     display: none;
   }
@@ -318,7 +309,7 @@ body {
   clear: both;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 720px) {
   .setLeft {
     float: none;
     height: 30vh;
@@ -327,7 +318,7 @@ body {
     justify-content: center;
   }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 720px) {
   .setRight {
     float: none;
     width: 100%;
@@ -335,7 +326,7 @@ body {
     text-align: center;
   }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 720px) {
   .abt {
     display: inline;
     align-items: center;
@@ -359,7 +350,7 @@ body {
   font-size: 3vh;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 720px) {
   .aboutBody {
     font-size: 14px;
   }
