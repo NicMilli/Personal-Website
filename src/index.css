@@ -158,19 +158,22 @@ body {
   z-index: 1000;
 }
 
+.dropIconTi {
+  color: #ff6a95;
+  cursor: pointer;
+  z-index: 1000;
+  position: fixed;
+}
+
 .dropdown {
   background-color: rgba(0,0,0,0.8);
   position: fixed;
-  align-items: right;
-  justify-content: center;
   width: 40vw;
   height: auto;
   margin-top: 20vh;
   margin-left: 60vw;
   padding-top: 15vh;
-  left: 0;
-  opacity: 1;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   z-index: 1;
 }
 @media screen and (max-height: 800px) {
@@ -182,7 +185,6 @@ body {
 
 .menuList {
   list-style: none;
-  text-align: left;
 }
 
 .dropItem a{
@@ -464,6 +466,12 @@ body {
   background-size: 1000%;
   animation: bg-animation 20s ease infinite alternate;
 }
+
+@media screen and (max-height: 800px) {
+  .homeColor {
+    height: calc(100vh - 90px)
+  }
+} 
 
 @keyframes bg-animation {
   0% {background-position: left;}

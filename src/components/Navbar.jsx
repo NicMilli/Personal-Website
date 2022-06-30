@@ -10,22 +10,6 @@ const [click, setClick] = useState(false)
 const onClick = () => { setClick(!click) }
 const exitMenu = () => { setClick(false) }
 
-// const onMouseEnter = () => {
-//   if (window.innerWidth < 1100) {
-//     setDropdown(false);
-//   } else {
-//     setDropdown(true);
-//   }
-// };
-
-// const onMouseLeave = () => {
-//   if (window.innerWidth < 1100) {
-//     setDropdown(false);
-//   } else {
-//     setDropdown(false);
-//   }
-// };
-
   return (
     <nav className='navbar'>
       <div className="twenty">
@@ -46,7 +30,7 @@ const exitMenu = () => { setClick(false) }
 
       <div className="eightysm">
         {click 
-        ? <FaTimes size={30} className='dropIcon' onClick={onClick} /> 
+        ? <FaTimes size={30} className='dropIconTi' onClick={onClick} /> 
         : <FaBars size={30} className='dropIcon' onClick={onClick} />}
       </div>
 
