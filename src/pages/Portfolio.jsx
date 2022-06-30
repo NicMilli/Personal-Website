@@ -93,7 +93,7 @@ const sortButton = (key) => {
 }
 
 if(loading || fetching) {
-  return <><Loading/></>
+  return <div className='topSpace'><Loading/></div>
 }
 
   return (
@@ -133,13 +133,12 @@ if(loading || fetching) {
             </div>
             }
             {url[item][2]
-            ? ( <div className='center' onMouseEnter={() => onHover(item)} onMouseLeave={onLeave}>
-                  <article className='center'>
-                    <img src={url[item][2]} alt={item} onError={(e) => imgError(e)} className='portfolioIcon center'/>
+            ? ( <div className='center'>
+                    <img src={url[item][2]} alt={item} onError={(e) => imgError(e)} 
+                    onMouseEnter={() => onHover(item)} onMouseLeave={onLeave} className='portfolioIcon center'/>
                     {hover === item 
                     ? <p className="textOver" onMouseEnter={() => onHover(item)}>{url[item][3]}</p>
                     : null }
-                  </article>
                   <br /> 
                 </div>)
             : ( <div className='center'  onMouseEnter={() => onHover(item)} onMouseLeave={onLeave}>

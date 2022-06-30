@@ -26,33 +26,33 @@ useEffect(() => {
 }, [])
 
 if(fetching) {
-  return <><Loading/></>
+  return <div className='topSpace'><Loading/></div>
 }
 
   return (
     <div className='aboutPage'>
       <p className="pageHeader"> About Nicholas </p>
-        <div className="columns">
-          <div className="setLeft">
-            <img src={content.myPic.url} alt="Profile" className='myPic'/>
-            {content.myPic.description ? content.myPic.description : null}
-          </div>
-          <div className="setRight">
-            <p className='aboutBody'>
-              {content.Paragraph1 ? content.Paragraph1 : null}
-            </p> 
-          </div>
+      
+        <div className='center abt'>
+          <img src={content.myPic.url} alt="Profile" className='myPic setLeft'/>
+          {content.myPic.description ? content.myPic.description : null}
+          <p className='aboutBody setRight'>
+            {content.Paragraph1 ? content.Paragraph1 : null}
+          </p> 
         </div>
         <div className="clear"></div>
+
         <p className='aboutBody pink'>
           {content.tagline ? content.tagline : null}
         </p>
         <br />
+
         <span>
           <img src={content.SABass.url} alt="Magazine Cover" className='SABass'/>
           <p>{content.SABass.description ? content.SABass.description : null}</p>
         </span>
         <br />
+
         <p className='aboutBody'>
           {content.Paragraph2 ? content.Paragraph2 : null}
           <br /> <br />

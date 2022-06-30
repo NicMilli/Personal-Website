@@ -17,8 +17,7 @@ function Home() {
       <div>
         <h1 className="homeTitle respTitle">
           Nicholas Milligan
-          <br></br>
-          <div className="links">
+          <div className="center">
             <a  target='_blank' rel='noreferrer noreopener' href='https://github.com/NicMilli'>
               <FaGithub className='icon' />
             </a>

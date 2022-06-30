@@ -2,7 +2,7 @@ import { FaFish } from 'react-icons/fa'
 
 function Loading() {
   return (
-    <div className='topSpace'>
+    <div className='center'>
       <div className='loading-spinner'>
         <FaFish size={50} fill='#ff6a95' />
       </div>

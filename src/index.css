@@ -106,12 +106,13 @@ body {
 /* NotFound Page */
 
 .oops {
+  margin-bottom: 2vh;
   font-weight: 700;
-  font-size: 10vh;
+  font-size: 12vh;
   text-align: center;
   color: transparent;
   background-image: var(--gradient);
-  background-size: 5%;
+  background-size: 80%;
   background-clip: text;
   -webkit-background-clip: text;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -131,7 +132,7 @@ body {
 .myIcon {
   height: 9.5vh;
   margin-top: 0.5vh;
-  width: auto;
+  max-width: 25vw;
   margin-left: 2vw;
 }
 
@@ -147,7 +148,7 @@ body {
   justify-content: flex-end;
   width: 85vw;
   margin: 2vw;
-  line-height: 0.1vh
+  line-height: 0.1vh;
 }
 
 .navTitle {
@@ -158,13 +159,13 @@ body {
 @media screen and (max-width: 720px) {
   .navTitle {
     margin-left: 1vw;
-    font-size: 12px;
+    font-size: 14px;
   }
 } 
 @media screen and (max-width: 620px) {
   .navTitle {
     margin-left: 1vw;
-    font-size: 10px;
+    font-size: 12px;
   }
 } 
 
@@ -206,52 +207,59 @@ body {
   align-items: center;
  }
 
- .setLeft {
+ .abt {
   display: flex;
-  width: 35vw;
-  float: left;
   align-items: center;
   justify-content: center;
-  height: 100%;
+ }
+
+ .setLeft {
+  width: 35vw;
+  float: left;
+  height: auto;
   margin-top: 1vh;
   margin-bottom: 1vh;
  }
  
  .setRight {
-  display: flex;
   width: 60vw;
   float: right;
-  align-items: center;
-  justify-content: center;
   text-align: left;
   height: 100%;
   margin-top: 1vh;
   margin-bottom: 1vh;
  }
 
- .columns {
-  display: flex;
-  align-items: center;
-  justify-content: center;
- }
- @media screen and (max-width: 1100px) {
-  .columns{
-    display: inherit;
-  }
-} 
  .clear {
   clear: both;
 }
 
 @media screen and (max-width: 1100px) {
-  .setLeft,
+  .setLeft {
+    float: none;
+    height: 30vh;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1100px) {
   .setRight {
     float: none;
     width: 100%;
     height: auto;
     text-align: center;
   }
+}
+@media screen and (max-width: 1100px) {
+  .abt {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    float: none;
+  }
 } 
+
 
 .pink {
   color: #ff6a95;
@@ -478,45 +486,74 @@ body {
   }
 }
 
-@media screen and (min-width: 450px) {
   .respTitle {
-    font-size: 5vw;
+    font-size: 80px;
   }
-}
-
+@media screen and (max-width: 850px) {
+  .respTitle {
+    font-size: 60px;
+  }
+} 
+@media screen and (max-width: 550px) {
+  .respTitle {
+    font-size: 50px;
+  }
+} 
 @media screen and (max-width: 450px) {
   .respTitle {
-    font-size: 20pt;
+    font-size: 35px;
   }
 } 
 
 .homeTitle {
   text-align: center;
-  margin-top: 48vh;
-  margin-bottom: 48vh;
-  z-index: 1;
   position: relative;
   font-family: Roboto, sans-serif;
   font-weight: 500;
-  text-shadow: 1px 1px #d3d3d3;
+  text-shadow: 1px 1px #575757;
+  line-height: 100%;
 }
 
 .icon {
   color: #000000;
-  height: 5vh;
-  width: 5vh;
+  height: 50px;
  }
 
  .icon:hover {
-  height: 7vh;
-  width: 7vh;
+  color: #383838;
+  height: 60px;
  }
 
- .links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
- }
+ @media screen and (max-width: 850px) {
+  .icon {
+    height: 40px;
+  }
+  .icon:hover {
+    height: 48px;
+  }
+} 
+@media screen and (max-width: 550px) {
+  .icon {
+    height: 30px;
+  }
+  .icon:hover{
+    height: 36px;
+}
+} 
+@media screen and (max-width: 450px) {
+  .icon {
+    height: 20px;
+  }
+  .icon:hover {
+    height: 25px;
+  }
+} 
+
+ @media screen and (max-width: 450px) {
+  .respTitle {
+    font-size: 35px;
+  }
+} 
 
  /* Portfolio Page */
 
@@ -747,9 +784,5 @@ animation: fishy 1.5s linear infinite;
 }
 
 .topSpace {
-margin-top: 20vh;
+margin-top: 30vh;
 }
-
-/* To Delete?  
-
-*/
