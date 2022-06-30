@@ -77,9 +77,14 @@ body {
 }
 @media screen and (max-width: 750px) {
   .pageHeader {
-    font-size: 8vw;
+    font-size: 40px;
   }
 } 
+@media screen and (max-height: 500px) {
+  .pageHeader {
+    font-size: 40px;
+  }
+}
 
 .loading {
   font-weight: 600; 
