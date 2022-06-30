@@ -165,7 +165,6 @@ body {
   height: auto;
   margin-top: 35vh;
   margin-left: 60vw;
-  transition: all 1s ease;
   z-index: 1;
 }
 @media screen and (max-height: 800px) {
@@ -173,6 +172,11 @@ body {
   margin-top: 300px;
 }
 }
+@media screen and (min-width: 721px) {
+  .dropdown {
+    display: none;
+  }
+  }
 
 .menuList {
   list-style: none;
@@ -220,7 +224,7 @@ body {
   width: 85vw;
   margin-right: 2vw;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 720.1px) {
   .eightysm {
     display: none;
   }
@@ -274,8 +278,13 @@ body {
  .SABass {
   height: 30vh;
   width: auto;
-  
  }
+ @media screen and (max-height: 500px) {
+  .myPic,
+  .SABass {
+    height: 50vh
+  }
+}
 
  .aboutPage {
   text-align: center;
@@ -697,6 +706,11 @@ body {
   font-size: 2vh;
   border: 0; 
 }
+@media screen and (max-height: 500px) {
+  .prt-btn {
+    font-size: 20px;
+  }
+}
 
 .prt-btn:hover {
   text-decoration: underline;
@@ -715,6 +729,11 @@ body {
   font-size: 2vh;
   border: 0; 
 }
+@media screen and (max-height: 500px) {
+  .prt-act-btn {
+    font-size: 20px;
+  }
+}
 
 .portfolioIcon {
   height: 25vh;
@@ -726,6 +745,11 @@ body {
     height: auto;
   }
 } 
+@media screen and (max-height: 500px) {
+  .portfolioIcon {
+    height: 50vh;
+  }
+}
 
  .projectTitle {
   font-size: 3vh;
