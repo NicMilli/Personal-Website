@@ -21,7 +21,6 @@ function Home() {
             <a  target='_blank' rel='noreferrer noreopener' href='https://github.com/NicMilli'>
               <FaGithub className='icon' />
             </a>
-            &nbsp;
             <a  target='_blank' rel='noreferrer noreopener' href='https://www.linkedin.com/in/nicholas-milligan-5ba6971a5/'>
               <FaLinkedin className='icon' />
             </a>
