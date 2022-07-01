@@ -174,7 +174,7 @@ body {
 }
 @media screen and (max-height: 800px) {
 .dropdown {
-  margin-top: 300px;
+  margin-top: 310px;
 }
 }
 @media screen and (min-width: 721px) {
