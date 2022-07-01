@@ -47,7 +47,6 @@ I chose Firebase to host my CMS as it is newer and faster than AWS and wouldn't 
   * Did not pre-designed CSS viewport breakpoints meaning that time was wasted tweaking the breakpoints for each CSS class.
   * Did not define enough globally used CSS classes, again wasting time customizing each element.
   * The Firestore collection for the project information is structured as an array, my brain works better this way but in hind sight this may make the CMS more difficult to use for those who are not technical minded.
-  * The Portfolio page is not well optimized for landscape view on phones.
  
 # Code Highlights:
 
