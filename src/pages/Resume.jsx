@@ -13,7 +13,7 @@ const resumeURL = process.env.REACT_APP_RES_URL
       <div className="stack">
         <TechStack/>
         </div>
-        <br /> <br />
+        <br />
         <h1>Learn all you need to know from my resume below!</h1>
         <p>If you are having trouble viewing the PDF below, <a href={resumeURL} target='_blank' rel='noreferrer noreopenner' className='loading'>please follow this link.</a></p>
         <div className="res">
