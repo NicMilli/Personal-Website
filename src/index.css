@@ -169,7 +169,7 @@ body {
   width: 40vw;
   height: auto;
   margin-top: 35vh;
-  margin-left: 60vw;
+  margin-left: 55vw;
   z-index: 1;
 }
 @media screen and (max-height: 800px) {
