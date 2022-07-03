@@ -166,10 +166,11 @@ body {
 .dropdown {
   background-color: rgba(0,0,0,0.8);
   position: absolute;
-  width: 40vw;
+  width: 45vw;
   height: auto;
   margin-top: 35vh;
-  margin-left: 50vw;
+  padding-top: 2vh;
+  margin-left: 55vw;
   z-index: 1;
 }
 @media screen and (max-height: 800px) {
@@ -191,10 +192,14 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 20px;
-  line-height: 150%;
+  line-height: 50%;
   color: #BFB2F3;
   font-family: -apple-system, BlinkMacSystemFont, "Oxygen",
   sans-serif;
+  display: flex;
+  text-align: left;
+  flex-wrap: wrap;
+  margin-left: -15vw;
 }
 
 .dropItem a:hover {
@@ -224,7 +229,6 @@ body {
 .eightysm {
   display: flex;
   flex-wrap: wrap;
-  text-align: right;
   justify-content: flex-end;
   width: 85vw;
   margin-right: 2vw;
