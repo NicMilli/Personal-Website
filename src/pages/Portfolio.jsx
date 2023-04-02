@@ -151,7 +151,7 @@ if(loading || fetching) {
               {url[item][0]
               ? ( <>
                     <a href={url[item][0]} target='_blank' rel='noreferrer noreopener' >
-                      <p className='align center'> <FaLaptopCode/>  Web App! </p>
+                      <p className='align center'> <FaLaptopCode/> &nbsp; Web App! </p>
                     </a>
                     &nbsp;
                   </> )
@@ -162,7 +162,7 @@ if(loading || fetching) {
               {url[item][1]
               ? ( <div >
                     <a href={url[item][1]} target='_blank' rel='noreferrer noreopener' >
-                      <p className='align center'> <FaGithub/>  Source code! </p>
+                      <p className='align center'> <FaGithub/> &nbsp; Source code! </p>
                     </a>
                   </div>)
               : null }
