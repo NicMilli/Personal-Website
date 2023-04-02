@@ -34,7 +34,7 @@ useEffect(() => {
           setUrl(urlSnap.data())
           setFetching(false)
       }
-      
+
   }
 
   fetchProjects()
@@ -108,7 +108,7 @@ if(loading || fetching) {
             return a.localeCompare(b);
             }
           }).map((key) => (
-            sortButton(key) 
+            sortButton(key)
           ))}
         </div>
       </div>
@@ -122,9 +122,9 @@ if(loading || fetching) {
             } else {
             return 0;
             }
-          }).map((item, id) => ( 
+          }).map((item, id) => (
           <div key={id} className='border'>
-            {url[item] 
+            {url[item]
             ? <p className='projectTitle'>{item}</p>
             : <div className="center">
               <img src={fallbackImg} alt={item} className='portfolioIcon'/>
@@ -132,28 +132,28 @@ if(loading || fetching) {
             }
             {url[item][2]
             ? ( <div className='center'>
-                    <img src={url[item][2]} alt={item} onError={(e) => imgError(e)} 
+                    <img src={url[item][2]} alt={item} onError={(e) => imgError(e)}
                     onMouseEnter={() => onHover(item)} onMouseLeave={onLeave} className='portfolioIcon center'/>
-                    {hover === item 
+                    {hover === item
                     ? <p className="textOver" onMouseEnter={() => onHover(item)}>{url[item][3]}</p>
                     : null }
-                  <br /> 
+                  <br />
                 </div>)
             : ( <div className='center'  onMouseEnter={() => onHover(item)} onMouseLeave={onLeave}>
                   <img src={fallbackImg} alt={item} className='portfolioIcon'/>
-                  {hover === item 
+                  {hover === item
                   ? <p className="textOver" onMouseEnter={() => onHover(item)}>{url[item][3]}</p>
                   : null }
-                  <br /> 
-                </div>) 
+                  <br />
+                </div>)
             }
             <div className="center projectLinks">
               {url[item][0]
               ? ( <>
                     <a href={url[item][0]} target='_blank' rel='noreferrer noreopener' >
-                      <p className='align'> <FaLaptopCode/> Web App! </p>
-                    </a> 
-                    &nbsp; 
+                      <p className='align center'> <FaLaptopCode/>  Web App! </p>
+                    </a>
+                    &nbsp;
                   </> )
               : null }
 
@@ -162,16 +162,16 @@ if(loading || fetching) {
               {url[item][1]
               ? ( <div >
                     <a href={url[item][1]} target='_blank' rel='noreferrer noreopener' >
-                      <p className='align'> <FaGithub/> Source code! </p>
+                      <p className='align center'> <FaGithub/>  Source code! </p>
                     </a>
                   </div>)
               : null }
-              
+
               <br />
             </div>
           </div>
 
-        ))} 
+        ))}
       </div>
     </>
   )
