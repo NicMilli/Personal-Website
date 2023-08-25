@@ -56,7 +56,7 @@ if(fetching) {
         <p className='aboutBody'>
           {content.Paragraph2 ? content.Paragraph2 : null}
           <br /> <br />
-          His tech stack includes but is not limited to: 
+          My tech stack includes but is not limited to: 
           <br />   
         </p>
       <TechStack/>
