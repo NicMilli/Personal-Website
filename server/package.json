@@ -8,14 +8,23 @@
     "start": "node dist/index.js"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
+    "@aws-sdk/client-s3": "^3.995.0",
     "cors": "^2.8.5",
     "express": "^4.21.2",
-    "nodemailer": "^6.9.16"
+    "express-rate-limit": "^8.2.1",
+    "mongodb": "^7.1.0",
+    "multer": "^2.0.2",
+    "nodemailer": "^6.9.16",
+    "sharp": "^0.34.5",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
+    "@types/multer": "^2.0.0",
     "@types/nodemailer": "^6.4.17",
+    "@types/uuid": "^10.0.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3"
   }

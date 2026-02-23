@@ -5,7 +5,29 @@
 @layer base {
   body {
     @apply bg-white text-gray-900;
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #c1b3e8 #f0f0f0;
   }
+}
+
+/* Chromium / Safari / Edge */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1b3e8;
+  border-radius: 4px;
+  border: 2px solid #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a99bd6;
 }
 
 /* Pastel gradient animation */
@@ -38,23 +60,59 @@
 /* Bubble animation */
 @keyframes bubble-rise {
   0% {
-    transform: translateY(100vh) scale(0);
+    transform: translate(0, 100%);
     opacity: 0;
   }
   10% {
-    opacity: 0.6;
+    opacity: 1;
   }
   100% {
-    transform: translateY(-10vh) scale(1);
-    opacity: 0;
+    transform: translate(var(--drift, 0vh), calc(-100vh + 73px - 100%));
   }
 }
 
 .bubble {
   position: absolute;
-  border-radius: 50%;
+  border-radius: 70%;
   pointer-events: none;
-  animation: bubble-rise linear infinite;
+  background: transparent;
+  box-shadow: inset 0.1vh -0.1vh 0.3vh #4f42b5;
+  animation: bubble-rise var(--duration, 8s) ease var(--delay, 0s) infinite backwards;
+}
+
+/* Shine highlight — small white glint in the top-right of each bubble */
+.bubble::before {
+  content: "";
+  position: absolute;
+  background: white;
+  width: 25%;
+  height: 25%;
+  min-width: 2px;
+  min-height: 2px;
+  border-radius: 50%;
+  top: 20%;
+  right: 20%;
+  box-shadow: 0 0 3px white;
+}
+
+/* Image bubbles — user-submitted photos/SVGs */
+.bubble.bubble--image {
+  background-size: cover;
+  background-position: center;
+  box-shadow:
+    inset 0.1vh -0.1vh 0.3vh #4f42b5,
+    0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* No shine glint on image bubbles */
+.bubble.bubble--image::before {
+  display: none;
+}
+
+/* Soothing background for non-home pages — very light lavender/blue blend drawn from the home gradient palette */
+.page-bg {
+  background: linear-gradient(160deg, #fdf9ff 0%, #f0f5ff 60%, #fdf4f9 100%);
+  background-attachment: fixed;
 }
 
 /* Loading spinner fade-in */

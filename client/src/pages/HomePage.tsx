@@ -1,38 +1,72 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
+import ChatWidget from "@/components/ChatWidget.js";
+import { useBubbleImages } from "@/hooks/useBubbleImages.js";
 
-function generateBubbles(count: number) {
-  return Array.from({ length: count }, (_, i) => {
-    const size = Math.random() * 30 + 10;
-    const left = Math.random() * 100;
+interface BubbleData {
+  id: number;
+  size: number;
+  left: number;
+  duration: number;
+  delay: number;
+  drift: string;
+  imageUrl?: string;
+}
+
+function generateBubbles(count: number, imageUrls: string[]): BubbleData[] {
+  const bubbles = Array.from({ length: count }, (_, i) => {
+    const isImage = i < imageUrls.length;
+    const size = isImage
+      ? Math.random() * 4 + 6 // image bubbles: 6–10vh
+      : Math.random() * 1.2 + 0.6;
+    const left = Math.random() * 96 + 2;
     const duration = Math.random() * 10 + 8;
     const delay = Math.random() * 10;
-    const opacity = Math.random() * 0.3 + 0.1;
-    return { id: i, size, left, duration, delay, opacity };
+    const drift = (Math.random() * 20 - 10).toFixed(1);
+    return { id: i, size, left, duration, delay, drift, imageUrl: imageUrls[i] };
   });
+
+  // Bump the 4 smallest plain bubbles up to 1.2vh
+  const plain = bubbles.filter((b) => !b.imageUrl);
+  const sorted = [...plain].sort((a, b) => a.size - b.size);
+  const smallestIds = new Set(sorted.slice(0, 4).map((b) => b.id));
+  return bubbles.map((b) =>
+    !b.imageUrl && smallestIds.has(b.id) ? { ...b, size: Math.max(b.size, 1.2) } : b
+  );
 }
 
 export default function HomePage() {
-  const bubbles = useMemo(() => generateBubbles(15), []);
+  const imageUrls = useBubbleImages();
+  const bubbles = useMemo(
+    () => generateBubbles(15, imageUrls),
+    // Re-generate when image URLs load so image bubbles appear
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [imageUrls.join(",")]
+  );
 
   return (
-    <section className="animate-gradient relative flex min-h-[calc(100vh-73px)] items-center justify-center overflow-hidden">
-      {/* Bubbles */}
-      {bubbles.map((b) => (
-        <div
-          key={b.id}
-          className="bubble bg-white/30"
-          style={{
-            width: b.size,
-            height: b.size,
-            left: `${b.left}%`,
-            bottom: "-10%",
-            animationDuration: `${b.duration}s`,
-            animationDelay: `${b.delay}s`,
-            opacity: b.opacity,
-          }}
-        />
-      ))}
+    <section className="animate-gradient relative flex min-h-screen -mt-[73px] pt-[73px] items-center justify-center">
+      {/* Bubbles — clipped to the visible area below the navbar */}
+      <div className="absolute inset-x-0 bottom-0 top-[73px] overflow-hidden pointer-events-none">
+        {bubbles.map((b) => (
+          <div
+            key={b.id}
+            className={`bubble${b.imageUrl ? " bubble--image" : ""}`}
+            style={{
+              width: `${b.size}vh`,
+              height: `${b.size}vh`,
+              left: `${b.left}%`,
+              bottom: 0,
+              "--duration": `${b.duration}s`,
+              "--delay": `${b.delay}s`,
+              "--drift": `${b.drift}vh`,
+              ...(b.imageUrl
+                ? { backgroundImage: `url(${b.imageUrl})` }
+                : {}),
+            } as React.CSSProperties}
+          />
+        ))}
+      </div>
 
       {/* Hero content */}
       <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
@@ -88,6 +122,8 @@ export default function HomePage() {
           </a>
         </div>
       </div>
+
+      <ChatWidget />
     </section>
   );
 }
