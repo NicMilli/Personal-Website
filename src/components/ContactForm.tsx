@@ -27,6 +27,7 @@ export default function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          botcheck: "",
           ...form,
         }),
       });
@@ -54,6 +55,8 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Honeypot — hidden from humans, bots fill it in and get blocked */}
+      <input type="checkbox" name="botcheck" className="hidden" readOnly />
       <div>
         <label htmlFor="name" className="mb-1 block text-sm font-medium text-gray-700">
           Name *
